@@ -26,28 +26,20 @@ public class Program {
 			System.out.println("Employee #"+i+" data: ");
 			System.out.print("Outsourced (y/n)? ");
 			char decision =sc.next().charAt(0);
+			sc.nextLine();
+			System.out.print("Name: ");
+			String  name= sc.nextLine();
+			System.out.print("Hours: ");
+			int  hours = sc.nextInt();
+			System.out.print("Value per hour: ");
+			double  valuePerHour= sc.nextDouble();
 			
-			
-			if(decision == 'n') {
+			if(decision == 'n') {				
 				
-				sc.nextLine();
-				System.out.print("Name: ");
-				String  name= sc.nextLine();
-				System.out.print("Hours: ");
-				int  hours = sc.nextInt();
-				System.out.print("Value per hour: ");
-				double  valuePerHour= sc.nextDouble();
 				Employee employee0 = new Employee(name, hours, valuePerHour);
 				employeeList.add(employee0);
 			}else {
-				sc.nextLine();
-				System.out.print("Name: ");
-				String  name= sc.nextLine();
-				System.out.print("Hours: ");
-				int  hours = sc.nextInt();
-				System.out.print("Value per hour: ");
-				double  valuePerHour= sc.nextDouble();
-				System.out.print("Additional charge: ");
+				
 				double  additionalCharge= sc.nextDouble();
 				Employee employee0 = new OutsourceEmployee(name, hours, valuePerHour, additionalCharge);
 				employeeList.add(employee0);	

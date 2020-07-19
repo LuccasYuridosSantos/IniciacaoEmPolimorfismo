@@ -5,8 +5,7 @@ public class Employee {
 	private String name;
 	protected Integer hours;
 	protected Double valuePerHour;
-	
-	
+		
 	public Employee() {
 	}
 	
